@@ -25,10 +25,6 @@ function StoryReel() {
         profileSrc="https://avatars0.githubusercontent.com/u/56772876?s=460&u=6db8922f7527c27677116e623e347d577d8f3de0&v=4"
         title="Bionic Al"
       />
-      {/* Story */}
-      {/* Story */}
-      {/* Story */}
-      {/* Story */}
     </div>
   );
 }
