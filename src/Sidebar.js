@@ -8,14 +8,13 @@ import EmojiFlagsIcon from "@material-ui/icons/EmojiFlags";
 import StorefrontIcon from "@material-ui/icons/Storefront";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import ExpandMoreOutlinedIcon from "@material-ui/icons/ExpandMoreOutlined";
+import { useStateValue } from "./StateProvider";
 
 function Sidebar() {
+  const [{ user }, dispatch] = useStateValue(); //pull from login info dispatch
   return (
     <div className="sidebar">
-      <SidebarRow
-        src="https://avatars0.githubusercontent.com/u/56772876?s=460&u=6db8922f7527c27677116e623e347d577d8f3de0&v=4"
-        title="Bionic Al"
-      />
+      <SidebarRow src={user.photoURL} title={user.displayName} />
       <SidebarRow
         Icon={LocalHospitalIcon}
         title="COVID-19 Information Center"
